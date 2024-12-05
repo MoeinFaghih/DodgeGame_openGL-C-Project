@@ -9,7 +9,6 @@
 - **Random Object Firing & Animation**: Objects are fired at the player’s character from random coordinates, requiring quick reactions to dodge.
 - **Manual UI Elements**: Custom-built UI for settings and menus, including range bars, text boxes, and buttons for easy navigation and customization.
 - **Score Multiplier System**: Adjusts score based on player-defined settings (e.g., fire rate, object speed) for a customized challenge and reward balance.
-- **High Scores with Bubble Sort**: High scores are recorded and displayed in a sorted list maintained by a bubble sort algorithm.
 
 ## Technical Concepts
 
