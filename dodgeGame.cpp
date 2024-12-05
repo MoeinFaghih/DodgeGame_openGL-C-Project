@@ -19,6 +19,7 @@
 #define MIN_FIRERATE 1
 #define MAX_PROJSPEED 15
 #define MIN_PROJSPEED 5
+#define SPEED 5
 
 //defining states of the machine
 #define MENU 0
@@ -49,16 +50,30 @@ typedef struct {
 	double score;
 }player_t;
 
+//Global variables declaration
+//declaration of X and Y values of the player object
 double currentX = 0, currentY = 0, startX = 0, startY = 0, destX, destY;
-double speed = 5, xSpeed, ySpeed;
+
+double speed = SPEED,		//default speed of player obj
+xSpeed, ySpeed;				//variables for seprated X and Y speed vectors
+
+//String needed for user inputs, and displaying outputs
 char fRateString[10], pSpeedString[10], scoreString[20], username[40]="";
 
-int clockFlag = 0, chance1, chance2, hp = 3, state = MENU, fireRate = 5, fRateCircleX = 0, projSpeed = 10, pSpeedCircleX = 0;
+
+int clockFlag = 0,		
+chance1, chance2,		//used for frequency control
+hp = 3,					//default hitpoints
+state = MENU,			//default state
+fireRate = 5,			//default fireRate
+fRateCircleX = 0,		//X coordinate of the circle in the range menu, showing the value of fireRate
+projSpeed = 10, 
+pSpeedCircleX = 0;		//X coordinate of the circle in the range menu, showing the value of projectileSpeed
 
 double score = 0, multiplier = 2;
 
 fire_t fire[MAX_FIRE];			//an array to store all the fires(data types), limiting the number to MAX_FIRE
-player_t arr[40];
+player_t arr[40];				//array for storing player names and scores temporarily
 
 
 void resetVar()
